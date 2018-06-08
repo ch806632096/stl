@@ -1,0 +1,25 @@
+先在头文件里声明函数，然后main函数包含头文件
+test.h
+#include <stdio.h>
+int func(int x);
+
+
+
+func.c   
+int func(int x)
+{
+    return x*x ; //返回x的平方
+}
+
+
+
+main.c
+#include "test.h"
+void main()
+{
+    int a=3;
+    printf("%d\n", func(a) ); //调用func.c中的函数
+}
+
+
+把以上三个文件放到一个工程中，编译，就可以看到结果了。
